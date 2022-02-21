@@ -1,7 +1,7 @@
-<h1>Powers#index</h1>
-<p>Find me in app/views/powers/index.html.erb</p>~
+<h1>List of powers</h1>
+
 <ul>
 <% powers.each do |power| %>
-  <li><%= power.name %> - <%= power.description %></li>
+  <li><%= power.name %> - <%= power.description %> - <%= link_to 'Check this power!!', power_path %></li>
 <% end %>
 </ul>
