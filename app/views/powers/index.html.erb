@@ -1,7 +1,7 @@
 <h1>List of powers</h1>
 
 <ul>
-<% powers.each do |power| %>
-  <li><%= power.name %> - <%= power.description %> - <%= link_to 'Check this power!!', power_path %></li>
+<% @powers.each do |power| %>
+  <li><%= power.name %> - <%= power.description %> - <%= link_to 'Check this power!!', power_path(power) %></li>
 <% end %>
 </ul>
