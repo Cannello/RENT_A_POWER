@@ -1,8 +1,8 @@
 Rails.application.routes.draw do
   devise_for :users
   root to: 'pages#home'
-  resources :powers, only: [:index, :show] do
-    resources :bookings, only: [:new, :create]
+  resources :powers, only: %I[index show] do
+    resources :bookings, only: %I[new create]
   end
 
   get "bookings", to: "pages#bookings"
