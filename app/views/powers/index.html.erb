@@ -1,2 +1,7 @@
 <h1>Powers#index</h1>
-<p>Find me in app/views/powers/index.html.erb</p>
+<p>Find me in app/views/powers/index.html.erb</p>~
+<ul>
+<% powers.each do |power| %>
+  <li><%= power.name %> - <%= power.description %></li>
+<% end %>
+</ul>
