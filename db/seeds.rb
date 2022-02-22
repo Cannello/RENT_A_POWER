@@ -8,6 +8,7 @@
 
 require "open-uri"
 
+Booking.destroy_all
 Power.destroy_all
 
 file = File.open(Rails.root.join("db/images/speed.png"))

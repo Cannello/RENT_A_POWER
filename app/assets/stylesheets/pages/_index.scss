@@ -1,14 +1,10 @@
 // Import page-specific CSS files here.
 @import "home";
 @import "show";
+@import "bookings";
 
 @import url('https://fonts.googleapis.com/css2?family=Bangers&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
-
-// $white: #F5F5F5;
-// $lightorange: #fbab60;
-// $orange: orange;
-// $dark: black;
 
 .show_big {
   display: grid;
@@ -39,7 +35,6 @@
 }
 
 .show_product h1 {
-  font-size: 2.2em;
   color: $black;
   margin-top: -5px;
 }
