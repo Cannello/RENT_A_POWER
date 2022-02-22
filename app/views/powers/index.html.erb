@@ -8,7 +8,7 @@
       <div class="col-3">
         <%= link_to power_path(power) do %>
           <div class="powers-card mb-5">
-            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ3JLX65mKgLKvxsA5w5qOESJ5N-Nwx_9udeA&usqp=CAU" class="card-img-top" alt="...">
+            <%= cl_image_tag power.photo.key, class: "card-img-top" %>
             <div class="card-body">
               <h5 class="card-title d-flex justify-content-center"><%= power.name %></h5>
             </div>

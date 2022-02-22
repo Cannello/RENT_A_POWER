@@ -1,23 +1,20 @@
-<html>
-<body>
-<div class="show_container">
-  <div class="show_images">
-    <%=image_tag "invisibility.png" %>
-  </div>
-  <div class="show_product">
-    <div>
-      <p>Check out this super power:</p>
-      <h1><%= @power.name %></h1>
-      <%# <h2>$150</h2> %>
-      <p class="show_desc"><%= @power.description %></p>
-    </div>
-    <div class="show_buttons">
-      <%= link_to new_power_booking_path(@power) do %>
-        <button class="show_add">Rent!</button>
-      <% end %>
-      <button class="show_like"><span>♥</span></button>
+<div class="show_big">
+  <div class="show_card">
+    <div class="show_container">
+      <div class="show_images">
+        <%= cl_image_tag @power.photo.key %>
+      </div>
+      <div class="show_product">
+        <div>
+          <p>Check out this super power:</p>
+          <h1><%= @power.name %></h1>
+          <p class="show_desc"><%= @power.description %></p>
+        </div>
+        <div class="show_buttons">
+          <button class="show_add">Rent!</button>
+          <button class="show_like"><span>♥</span></button>
+        </div>
+      </div>
     </div>
   </div>
 </div>
-</body>
-</html>
