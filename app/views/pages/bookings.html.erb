@@ -1,0 +1,7 @@
+<h1>All your bookings</h1>
+
+<ul>
+<% @bookings.each do |booking| %>
+  <li>Your power:<%= booking.power %> - Booked in:<%= booking.created_at %></li>
+<% end %>
+</ul>
