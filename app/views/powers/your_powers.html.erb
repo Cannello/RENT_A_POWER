@@ -1,6 +1,6 @@
 <div class="container">
   <br>
-  <h1>List of powers</h1>
+  <h1>Your powers</h1>
   <br>
   <br>
   <div class="row">
@@ -15,6 +15,7 @@
             <% end %>
             <div class="card-body">
               <h5 class="card-title d-flex justify-content-center"><%= power.name %></h5>
+              <%= link_to "Edit", edit_power_path(power) %>
             </div>
           </div>
         <% end %>
