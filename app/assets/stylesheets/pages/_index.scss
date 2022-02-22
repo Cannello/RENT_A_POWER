@@ -10,15 +10,14 @@ $lightorange: #fbab60;
 $orange: orange;
 $dark: black;
 
-.html {
+.show_big {
   display: grid;
   min-height: 100%;
 }
 
-.body {
+.show_card {
   display: grid;
   background: $white;
-  font-family: 'Roboto', sans-serif;
   text-transform: uppercase;
 }
 
@@ -43,7 +42,6 @@ $dark: black;
   font-size: 2.2em;
   color: $dark;
   margin-top: -5px;
-  font-family: 'Bangers', cursive;;
 }
 
 .show_images img {
