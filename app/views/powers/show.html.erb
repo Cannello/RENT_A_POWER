@@ -12,7 +12,9 @@
       <p class="show_desc"><%= @power.description %></p>
     </div>
     <div class="show_buttons">
-      <button class="show_add">Rent!</button>
+      <%= link_to new_power_booking_path(@power) do %>
+        <button class="show_add">Rent!</button>
+      <% end %>
       <button class="show_like"><span>♥</span></button>
     </div>
   </div>

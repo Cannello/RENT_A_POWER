@@ -2,6 +2,6 @@
 
 <ul>
 <% @bookings.each do |booking| %>
-  <li>Your power:<%= booking.power %> - Booked in:<%= booking.created_at %></li>
+  <li>Your power:<%= booking.power.name %> - Booked in:<%= booking.start_date %> to: <%= booking.end_date %></li>
 <% end %>
 </ul>
