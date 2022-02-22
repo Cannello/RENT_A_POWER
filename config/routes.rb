@@ -2,7 +2,8 @@ Rails.application.routes.draw do
   devise_for :users
   root to: 'pages#home'
   get "bookings", to: "pages#bookings"
-  resources :powers, only: %i[index show] do
+  get "your_powers", to: "powers#your_powers"
+  resources :powers, only: %i[index show new create edit update] do
     resources :bookings, only: %i[new create]
   end
 
