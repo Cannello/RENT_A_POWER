@@ -10,12 +10,12 @@ $lightorange: #fbab60;
 $orange: orange;
 $dark: black;
 
-show_html {
+.html {
   display: grid;
   min-height: 100%;
 }
 
-body {
+.body {
   display: grid;
   background: $white;
   font-family: 'Roboto', sans-serif;
