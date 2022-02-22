@@ -1,17 +1,21 @@
-<div class="container">
-  <div class="images">
-    <%= image_tag "invisibility.png" %>
+<html>
+<body>
+<div class="show_container">
+  <div class="show_images">
+    <%=image_tag "invisibility.png" %>
   </div>
-  <div class="product">
+  <div class="show_product">
     <div>
       <p>Check out this super power:</p>
       <h1><%= @power.name %></h1>
       <%# <h2>$150</h2> %>
-      <p class="desc"><%= @power.description %></p>
+      <p class="show_desc"><%= @power.description %></p>
     </div>
-    <div class="buttons">
-      <button class="add">Rent!</button>
-      <button class="like"><span>♥</span></button>
+    <div class="show_buttons">
+      <button class="show_add">Rent!</button>
+      <button class="show_like"><span>♥</span></button>
     </div>
   </div>
 </div>
+</body>
+</html>

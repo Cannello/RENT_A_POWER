@@ -10,8 +10,7 @@ $lightorange: #fbab60;
 $orange: orange;
 $dark: black;
 
-/* center container in the middle */
-html {
+show_html {
   display: grid;
   min-height: 100%;
 }
@@ -23,7 +22,7 @@ body {
   text-transform: uppercase;
 }
 
-.container {
+.show_container {
   position: relative;
   margin: auto;
   overflow: hidden;
@@ -35,25 +34,19 @@ body {
   margin-bottom: 50px;
 }
 
-p {
+.show_product p {
   font-size: 0.6em;
-  color: $orange;
   letter-spacing: 1px;
 }
 
-h1 {
+.show_product h1 {
   font-size: 2.2em;
   color: $dark;
   margin-top: -5px;
   font-family: 'Bangers', cursive;;
 }
 
-h2 {
-  color: $light;
-  margin-top: -5px;
-}
-
-img {
+.show_images img {
   width: 290px;
   height: max-content;
   margin-top: 15px;
@@ -61,11 +54,11 @@ img {
   margin-left: 10px;
 }
 
-.images {
+.show_images {
   left: 15px;
 }
 
-.product {
+.show_product {
   display: flex;
   flex-direction: column;
   justify-content: space-around;
@@ -76,7 +69,7 @@ img {
   left: 60%;
 }
 
-.desc {
+.show_desc {
   text-transform: none;
   letter-spacing: 0;
   margin-bottom: 17px;
@@ -87,7 +80,7 @@ img {
   text-align: left;
 }
 
-button {
+.show_buttons button {
   background: darken($lightorange, 10%);
   padding: 10px;
   display: inline-block;
@@ -106,10 +99,10 @@ button {
   }
 }
 
-.add {
+.show_add {
   width: 67%;
 }
 
-.like {
+.show_ike {
   width: 22%;
 }
