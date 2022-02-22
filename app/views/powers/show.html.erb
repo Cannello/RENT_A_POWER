@@ -1,2 +1,17 @@
-<h1><%= @power.name %></h1>
-<h3><%= @power.description %></h3>
+<div class="container">
+  <div class="images">
+    <%= image_tag "invisibility.png" %>
+  </div>
+  <div class="product">
+    <div>
+      <p>Check out this super power:</p>
+      <h1><%= @power.name %></h1>
+      <%# <h2>$150</h2> %>
+      <p class="desc"><%= @power.description %></p>
+    </div>
+    <div class="buttons">
+      <button class="add">Rent!</button>
+      <button class="like"><span>♥</span></button>
+    </div>
+  </div>
+</div>

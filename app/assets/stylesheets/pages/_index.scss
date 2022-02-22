@@ -1,2 +1,115 @@
 // Import page-specific CSS files here.
 @import "home";
+@import "show";
+
+@import url('https://fonts.googleapis.com/css2?family=Bangers&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+
+$white: #F5F5F5;
+$lightorange: #fbab60;
+$orange: orange;
+$dark: black;
+
+/* center container in the middle */
+html {
+  display: grid;
+  min-height: 100%;
+}
+
+body {
+  display: grid;
+  background: $white;
+  font-family: 'Roboto', sans-serif;
+  text-transform: uppercase;
+}
+
+.container {
+  position: relative;
+  margin: auto;
+  overflow: hidden;
+  width: 550px;
+  // height: 350px;
+  background: $white;
+  box-shadow: 5px 5px 15px rgba($orange, .5);
+  border-radius: 10px;
+  margin-bottom: 50px;
+}
+
+p {
+  font-size: 0.6em;
+  color: $orange;
+  letter-spacing: 1px;
+}
+
+h1 {
+  font-size: 2.2em;
+  color: $dark;
+  margin-top: -5px;
+  font-family: 'Bangers', cursive;;
+}
+
+h2 {
+  color: $light;
+  margin-top: -5px;
+}
+
+img {
+  width: 290px;
+  height: max-content;
+  margin-top: 15px;
+  margin-bottom: 15px;
+  margin-left: 10px;
+}
+
+.images {
+  left: 15px;
+}
+
+.product {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  position: absolute;
+  width: 40%;
+  height: 100%;
+  top: 0;
+  left: 60%;
+}
+
+.desc {
+  text-transform: none;
+  letter-spacing: 0;
+  margin-bottom: 17px;
+  color: $dark;
+  font-size: .7em;
+  line-height: 1.6em;
+  margin-right: 25px;
+  text-align: left;
+}
+
+button {
+  background: darken($lightorange, 10%);
+  padding: 10px;
+  display: inline-block;
+  outline: 0;
+  border: 0;
+  margin: -1px;
+  border-radius: 2px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  color: $white;
+
+  cursor: pointer;
+  &:hover {
+    background: $orange;
+    transition: all .4s ease-in-out;
+  }
+}
+
+.add {
+  width: 67%;
+}
+
+.like {
+  width: 22%;
+}
