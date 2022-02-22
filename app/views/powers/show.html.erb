@@ -1,48 +1,17 @@
-<html>
-
-<body>
-  <main>
-    <div class="card">
-      <div class="card__title">
-        <div class="icon">
-          <a href="#"><i class="fa fa-arrow-left"></i></a>
-        </div>
-        <h3>Check out this super power</h3>
-      </div>
-      <div class="card__body">
-        <div class="half">
-          <div class="featured_text">
-            <h1><%= @power.name %></h1>
-          </div>
-          <div class="image">
-            <img src="https://images.unsplash.com/photo-1532202802379-df93d543bac3?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTB8fHN1cGVyaGVyb3xlbnwwfHwwfHw%3D&auto=format&fit=crop&w=800&q=60" alt="">
-          </div>
-        </div>
-        <div class="half">
-          <div class="description">
-            <p><%= @power.description %></p>
-          </div>
-          <div class="reviews">
-            <ul class="stars">
-              <li><i class="fa fa-star"></i></li>
-              <li><i class="fa fa-star"></i></li>
-              <li><i class="fa fa-star"></i></li>
-              <li><i class="fa fa-star"></i></li>
-              <li><i class="fa fa-star-o"></i></li>
-            </ul>
-            <span>(64 reviews)</span>
-          </div>
-        </div>
-      </div>
-      <div class="card__footer">
-        <div class="recommend">
-        </div>
-        <div class="action">
-          <button type="button">Rent</button>
-        </div>
-      </div>
+<div class="container">
+  <div class="images">
+    <%= image_tag "invisibility.png" %>
+  </div>
+  <div class="product">
+    <div>
+      <p>Check out this super power:</p>
+      <h1><%= @power.name %></h1>
+      <%# <h2>$150</h2> %>
+      <p class="desc"><%= @power.description %></p>
     </div>
-  </main>
-</body>
-
-</html>
+    <div class="buttons">
+      <button class="add">Rent!</button>
+      <button class="like"><span>♥</span></button>
+    </div>
+  </div>
+</div>
