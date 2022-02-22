@@ -1,15 +1,19 @@
 <div class="container">
+  <br>
   <h1>List of powers</h1>
   <br>
   <br>
-  <div class="row d-flex justify-content-evenly">
+  <div class="row">
     <% @powers.each do |power| %>
-      <div class="card col-4 mb-5" style="width: 18rem;">
-        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ3JLX65mKgLKvxsA5w5qOESJ5N-Nwx_9udeA&usqp=CAU" class="card-img-top" alt="...">
-        <div class="card-body">
-          <h5 class="card-title"><%= power.name %></h5>
-          <%= link_to "Check out this power", power_path(power), class: "btn btn-primary" %>
-        </div>
+      <div class="col-3">
+        <%= link_to power_path(power) do %>
+          <div class="powers-card mb-5">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ3JLX65mKgLKvxsA5w5qOESJ5N-Nwx_9udeA&usqp=CAU" class="card-img-top" alt="...">
+            <div class="card-body">
+              <h5 class="card-title d-flex justify-content-center"><%= power.name %></h5>
+            </div>
+          </div>
+        <% end %>
       </div>
     <% end %>
   </div>
