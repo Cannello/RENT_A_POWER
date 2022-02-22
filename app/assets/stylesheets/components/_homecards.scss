@@ -1,0 +1,56 @@
+.cards {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 30px;
+}
+
+.container h2 {
+  margin: 20px 0;
+}
+
+.card {
+  display: flex;
+  justify-content: flex-end;
+  align-content: center;
+  width: 250px;
+  border-radius: 3px;
+  box-shadow: 0 0 5px rgb(230, 230, 230);
+  text-align: center;
+  padding: 20px;
+  border: 1px solid rgb(230,230,230);
+}
+
+h1, h2, h3, h4 {
+  font-family: Roboto, sans-serif;
+}
+
+.card img {
+  width: 150px;
+  margin-top: 16px;
+  height: 160px;
+}
+
+h4 {
+  display: block;
+  margin: 21px 0;
+  font-weight: bolder;
+  font-size: 16px;
+}
+
+p {
+  margin-bottom: 16px;
+  font-size: 16px;
+}
+
+.container {
+  width: 900px;
+  margin: auto;
+}
+
+.card img, svg {
+  vertical-align: middle;
+}
+
+div {
+  display: block;
+}
