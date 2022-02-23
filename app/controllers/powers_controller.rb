@@ -17,7 +17,7 @@ class PowersController < ApplicationController
     @power.user_id = @user.id
 
     if @power.save
-      redirect_to powers_path
+      redirect_to your_powers_path
     else
       render :new
     end
@@ -38,6 +38,6 @@ class PowersController < ApplicationController
   private
 
   def set_power
-    params.require(:power).permit(:name, :description, :user_id)
+    params.require(:power).permit(:name, :description, :user_id, :photo)
   end
 end
