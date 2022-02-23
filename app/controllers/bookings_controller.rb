@@ -2,11 +2,13 @@ class BookingsController < ApplicationController
   def new
     @booking = Booking.new
     @power = Power.find(params[:power_id])
+    authorize @power
   end
 
   def create
     @booking = Booking.new(set_booking)
     @power = Power.find(params[:power_id])
+    authorize @power
     @booking.power = @power
     @booking.user = current_user
 
