@@ -4,14 +4,23 @@
 // 3. You can override them below!
 
 // General style
+$body-font: Roboto, sans-serif;
 $font-family-sans-serif:  $body-font;
+$headers-font: Roboto, sans-serif;
 $headings-font-family:    $headers-font;
 $body-bg:                 $light-gray;
 $font-size-base: 1rem;
 
+//Our palette
+$brown: #652701;
+$darkorange: #B74701;
+$mainorange: #FE6709;
+$lightorange: #FE9B5D;
+$superlightorange:#FFCDAE;
+
 // Colors
 $body-color: $gray;
-$primary:    $blue;
+$primary:    $mainorange;
 $success:    $green;
 $info:       $yellow;
 $danger:     $red;
