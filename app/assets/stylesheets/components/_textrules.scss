@@ -23,6 +23,7 @@ h2 {
 
 h3 {
   font-size: 22px;
+  text-decoration: none;
 }
 
 h4 {
@@ -31,4 +32,9 @@ h4 {
 
 p {
   font-size: 16px;
+}
+
+a {
+  text-decoration: none;
+  color: $black;
 }
