@@ -1,0 +1,20 @@
+.button {
+  background: darken($lightorange, 10%);
+  padding: 10px;
+  display: inline-block;
+  outline: 0;
+  border: 0;
+  margin: -1px;
+  border-radius: 2px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  color: $white;
+  text-decoration: none;
+
+
+  cursor: pointer;
+  &:hover {
+    background: $orange;
+    transition: all .4s ease-in-out;
+  }
+}
