@@ -2,7 +2,11 @@
   <div class="show_card">
     <div class="show_container">
       <div class="show_images">
-        <%= cl_image_tag @power.photo.key %>
+        <% if @power.photo.key %>
+          <%= cl_image_tag @power.photo.key, class: "card-img-top" %>
+        <% else %>
+          <img src="https://img.buzzfeed.com/buzzfeed-static/static/2019-02/6/17/campaign_images/buzzfeed-prod-web-01/can-you-guess-which-marvel-superhero-said-these-l-2-19906-1549493548-0_dblbig.jpg?resize=1200:*" alt="" class="card-img-top">
+        <% end %>
       </div>
       <div class="show_product">
         <div>

@@ -25,7 +25,7 @@
   position: relative;
   margin: auto;
   overflow: hidden;
-  width: 550px;
+  width: 580px;
   // height: 350px;
   background: $white;
   box-shadow: 5px 5px 15px rgba($orange, .5);
@@ -64,7 +64,7 @@
   width: 40%;
   height: 100%;
   top: 0;
-  left: 60%;
+  left: 57%;
 }
 
 .show_desc {
@@ -89,6 +89,8 @@
   text-transform: uppercase;
   letter-spacing: 1px;
   color: $white;
+  text-decoration: none;
+
 
   cursor: pointer;
   &:hover {
