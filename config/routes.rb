@@ -3,7 +3,7 @@ Rails.application.routes.draw do
   root to: 'pages#home'
   get "bookings", to: "pages#bookings"
   get "your_powers", to: "powers#your_powers"
-  resources :powers, only: %i[index show new create edit update] do
+  resources :powers do
     resources :bookings, only: %i[new create]
   end
 
