@@ -1,8 +1,17 @@
-<h1>Create an awesome super power</h1>
-<br>
-<%= simple_form_for (@power) do |f| %>
-  <%= f.input :name %>
-  <%= f.input :description %>
-  <%= f.input :photo, as: :file %>
-  <%= f.button :submit %>
-<% end %>
+<div class="container pt-5">
+  <div class="row justify-content-center">
+    <div class="col-12 col-md-6 col-lg-4">
+      <h1>Create an awesome <br>super power</h1>
+      <br>
+      <%= simple_form_for (@power) do |f| %>
+        <%= f.input :name %>
+        <%= f.input :description %>
+        <%= f.input :photo, as: :file %>
+        <br>
+        <div class="form-actions d-flex justify-content-center">
+          <%= f.button :submit, "Create", class: 'btn btn-primary larger-btn' %>
+        </div>
+      <% end %>
+    </div>
+  </div>
+</div>
