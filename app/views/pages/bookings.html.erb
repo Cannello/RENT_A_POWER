@@ -1,6 +1,7 @@
 <div class="container">
   <div class="row">
-    <h1>All your bookings</h1>
+    <br>
+    <h1 class="bookings-title">All your bookings</h1>
     <% @bookings.sort_by(&:start_date).each do |booking| %>
       <div class="show_container  col-5">
         <div class="show_images">
