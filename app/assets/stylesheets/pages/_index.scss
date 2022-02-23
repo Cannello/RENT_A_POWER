@@ -21,6 +21,11 @@
   text-transform: uppercase;
 }
 
+.show_images img {
+  max-height: 415px;
+  border-radius: 4px;
+}
+
 .show_container {
   position: relative;
   margin: auto;
@@ -31,11 +36,6 @@
   box-shadow: 5px 5px 15px rgba($orange, .5);
   border-radius: 10px;
   margin-bottom: 50px;
-}
-
-.show_product p {
-  font-size: 0.6em;
-  letter-spacing: 1px;
 }
 
 .show_product h1 {

@@ -1,7 +1,28 @@
-<h1>All your bookings</h1>
-
-<ul>
-<% @bookings.each do |booking| %>
-  <li>Your power:<%= booking.power.name %> - Booked in:<%= booking.start_date %> to: <%= booking.end_date %></li>
-<% end %>
-</ul>
+<div class="container">
+  <div class="row">
+    <h1>All your bookings</h1>
+    <% @bookings.sort_by(&:start_date).each do |booking| %>
+      <div class="show_container  col-5">
+        <div class="show_images">
+          <% if booking.power.photo.key %>
+            <%= cl_image_tag booking.power.photo.key, class: "card-img-top" %>
+          <% else %>
+            <img src="https://img.buzzfeed.com/buzzfeed-static/static/2019-02/6/17/campaign_images/buzzfeed-prod-web-01/can-you-guess-which-marvel-superhero-said-these-l-2-19906-1549493548-0_dblbig.jpg?resize=1200:*" alt="" class="card-img-top">
+          <% end %>
+        </div>
+        <div class="show_product">
+          <div>
+            <h1><%= booking.power.name %></h1>
+            <p class="show_desc"><%= booking.power.description %></p>
+          </div>
+          <% if booking.user_id == current_user.id %>
+            <div class="show_buttonsss">
+              <p  class='btn btn-primary larger-btn w-100' %> From: <%= booking.start_date.strftime("%d-%m-%Y") %></p>
+              <p  class='btn btn-primary larger-btn w-100' %> to: <%= booking.end_date.strftime("%d-%m-%Y") %></p>
+            </div>
+          <% end %>
+        </div>
+      </div>
+    <% end %>
+  </div>
+</div>
