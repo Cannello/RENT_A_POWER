@@ -14,10 +14,24 @@
           <h1><%= @power.name %></h1>
           <p class="show_desc"><%= @power.description %></p>
         </div>
-        <div class="show_buttonsss">
-          <%= link_to 'Rent!', new_power_booking_path(@power), class: 'btn btn-primary larger-btn' %>
-          <button class="btn btn-primary"><span>♥</span></button>
-        </div>
+        <% if @power.user_id == current_user.id %>
+          <div class="show_buttonsss">
+          <% if policy(@power).edit? %>
+            <%= link_to 'Edit!', edit_power_path(@power), class: 'btn btn-primary larger-btn' %>
+          <% end %>
+          <% if policy(@power).destroy? %>
+            <%= link_to "Delete",
+                        power_path(@power),
+                        class: "btn btn-primary",
+                        method: :delete,
+                        data: { confirm: "Are you sure?" } %>
+          <% end %>
+        <% else %>
+          <div class="show_buttonsss">
+            <%= link_to 'Rent!', new_power_booking_path(@power), class: 'btn btn-primary larger-btn' %>
+            <button class="btn btn-primary"><span>♥</span></button>
+          </div>
+        <% end %>
       </div>
     </div>
   </div>

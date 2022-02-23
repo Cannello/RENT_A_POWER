@@ -15,15 +15,6 @@
             <% end %>
             <div class="card-body">
               <h5 class="card-title d-flex justify-content-center"><%= power.name %></h5>
-              <% if policy(power).edit? %>
-                <%= link_to "Edit", edit_power_path(power) %>
-              <% end %>
-              <% if policy(power).destroy? %>
-                <%= link_to "Delete #{power.name}",
-                            power_path(power),
-                            method: :delete,
-                            data: { confirm: "Are you sure?" } %>
-              <% end %>
             </div>
           </div>
         <% end %>
