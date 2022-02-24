@@ -4,10 +4,8 @@
       <h1>Edit your Booking
       <br>
       <%= simple_form_for [@power, @booking] do |f| %>
-        <% if :start_date > Today.date %>
-          <%= f.input :start_date, as: :date, html5: true %>
-          <%= f.input :end_date, as: :date, html5: true %>
-        <% end %>
+        <%= f.input :start_date, as: :date, html5: true %>
+        <%= f.input :end_date, as: :date, html5: true %>
         <br>
         <div class="form-actions d-flex justify-content-center">
           <%= f.button :submit, "Create booking", class: 'btn btn-primary larger-btn' %>

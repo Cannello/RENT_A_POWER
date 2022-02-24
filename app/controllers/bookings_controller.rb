@@ -1,6 +1,6 @@
 class BookingsController < ApplicationController
-  before_action :set_power, only: %i[new create edit]
-  before_action :set_booking, only: %i[edit]
+  before_action :set_power, only: %i[new create edit update]
+  before_action :set_booking, only: %i[edit update]
   def new
     @booking = Booking.new
     authorize @booking
@@ -21,10 +21,17 @@ class BookingsController < ApplicationController
     end
   end
 
-  def edit; end
+  def edit
+    authorize @booking
+  end
 
   def update
-
+    authorize @booking
+    if @booking.update(booking_params)
+      redirect_to bookings_path
+    else
+      render :new
+    end
   end
 
   private

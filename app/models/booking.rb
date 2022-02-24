@@ -6,11 +6,11 @@ class Booking < ApplicationRecord
   validate :check_end_date_acceptance?
 
   def check_start_date_acceptance?
-    errors.add(:start_date, 'start date must be bigger than today') unless Date.today.to_s <= start_date.to_s
+    errors.add(:start_date, 'must be bigger than today') unless Date.today.to_s <= start_date.to_s
   end
 
   def check_end_date_acceptance?
-    errors.add(:end_date, 'End date must be bigger than start date') unless start_date.to_s <= end_date.to_s
+    errors.add(:end_date, 'must be bigger or equal to start date') unless start_date.to_s <= end_date.to_s
   end
 
   # { message: "Start date must be bigger or equal to today's date"}

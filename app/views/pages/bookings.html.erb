@@ -17,9 +17,10 @@
             <p class="show_desc"><%= booking.power.description %></p>
           </div>
           <% if booking.user_id == current_user.id%>
-            <div class="show_buttons">
-              <p  class='btn btn-primary larger-btn w-100' %> From: <%= booking.start_date.strftime("%d-%m-%Y") %></p>
-              <p  class='btn btn-primary larger-btn w-100' %> to: <%= booking.end_date.strftime("%d-%m-%Y") %></p>
+            <div class="edit-button">
+              <p  class='btn btn-primary larger-btn w-100  booking-button' %> From: <%= booking.start_date.strftime("%d-%m-%Y") %></p>
+              <p  class='btn btn-primary larger-btn w-100  booking-button' %> to: <%= booking.end_date.strftime("%d-%m-%Y") %></p>
+              <%= link_to 'Edit booking', edit_power_booking_path(power_id: booking.power, id: booking), class: "btn btn-primary larger-btn w-100  booking-button" %>
             </div>
           <% end %>
         </div>
