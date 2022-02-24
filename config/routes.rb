@@ -4,7 +4,7 @@ Rails.application.routes.draw do
   get "bookings", to: "pages#bookings"
   get "your_powers", to: "powers#your_powers"
   resources :powers do
-    resources :bookings, only: %i[new create]
+    resources :bookings, only: %i[new create edit update]
   end
 
   # For details on the DSL available within this file, see https://guides.rubyonrails.org/routing.html
