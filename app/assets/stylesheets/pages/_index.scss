@@ -21,16 +21,11 @@
   text-transform: uppercase;
 }
 
-.show_images img {
-  max-height: 415px;
-  border-radius: 4px;
-}
-
 .show_container {
   position: relative;
   margin: auto;
   overflow: hidden;
-  width: 580px;
+  width: 588px;
   // height: 350px;
   background: $white;
   box-shadow: 5px 5px 15px rgba($orange, .5);
@@ -50,11 +45,13 @@
 }
 
 .show_images img {
+  max-height: 415px;
+  border-radius: 4px;
   width: 290px;
   height: max-content;
-  margin-top: 15px;
-  margin-bottom: 15px;
-  margin-left: 10px;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  margin-left: 20px;
 }
 
 .show_images {
@@ -67,6 +64,8 @@
 
 .show_buttonsss {
   margin-bottom: 14px;
+  padding-bottom: 20px;
+
 }
 
 .show_product {
@@ -74,7 +73,7 @@
   flex-direction: column;
   justify-content: space-between;
   position: absolute;
-  width: 40%;
+  width: 43%;
   height: 100%;
   top: 0;
   left: 57%;
@@ -117,4 +116,9 @@
 
 .show_ike {
   width: 22%;
+}
+
+.product-top {
+margin-top: 20px;
+margin-bottom: 20px;
 }
