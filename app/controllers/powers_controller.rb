@@ -1,7 +1,12 @@
 class PowersController < ApplicationController
   before_action :set_power, only: %i[show edit update destroy]
+
   def index
-    @powers = policy_scope(Power)
+    if params[:query].present?
+      @powers = policy_scope(Power.search_by_name_and_description(params[:query]))
+    else
+      @powers = policy_scope(Power)
+    end
   end
 
   def show; end

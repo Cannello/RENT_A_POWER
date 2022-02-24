@@ -2,6 +2,13 @@
   <br>
   <h1>List of powers</h1>
   <br>
+  <%= form_tag powers_path, method: :get do %>
+    <%= text_field_tag :query,
+      params[:query],
+      class: "form-control",
+      placeholder: "Find a power"
+    %>
+  <% end %>
   <br>
   <div class="row">
     <% @powers.each do |power| %>
