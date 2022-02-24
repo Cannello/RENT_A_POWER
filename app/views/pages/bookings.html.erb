@@ -20,7 +20,9 @@
             <div class="edit-button">
               <p> From: <%= booking.start_date.strftime("%d-%m-%Y") %></p>
               <p> to: <%= booking.end_date.strftime("%d-%m-%Y") %></p>
-              <%= link_to 'Edit booking', edit_power_booking_path(power_id: booking.power, id: booking), class: "btn btn-primary larger-btn w-100  booking-button" %>
+              <% if policy(booking).edit? %>
+                <%= link_to 'Edit booking', edit_power_booking_path(power_id: booking.power, id: booking), class: "btn btn-primary larger-btn w-100  booking-button" %>
+              <% end %>
             </div>
           <% end %>
         </div>
