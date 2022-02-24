@@ -16,7 +16,7 @@
             <h1><%= booking.power.name %></h1>
             <p class="show_desc"><%= booking.power.description %></p>
           </div>
-          <% if booking.user_id == current_user.id %>
+          <% if booking.user_id == current_user.id%>
             <div class="show_buttons">
               <p  class='btn btn-primary larger-btn w-100' %> From: <%= booking.start_date.strftime("%d-%m-%Y") %></p>
               <p  class='btn btn-primary larger-btn w-100' %> to: <%= booking.end_date.strftime("%d-%m-%Y") %></p>
