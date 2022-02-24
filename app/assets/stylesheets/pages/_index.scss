@@ -21,6 +21,14 @@
   text-transform: uppercase;
 }
 
+.show_images img {
+  max-height: 415px;
+  border-radius: 4px 0 0 4px;
+  width: 290px;
+  height: max-content;
+  
+}
+
 .show_container {
   position: relative;
   margin: auto;
@@ -31,6 +39,7 @@
   box-shadow: 5px 5px 15px rgba($orange, .5);
   border-radius: 10px;
   margin-bottom: 50px;
+  padding: 0;
 }
 
 .bookings-title {
@@ -41,27 +50,20 @@
 .show_product h1 {
   font-size: 2.2em;
   color: $black;
-  margin-top: 9px;
 }
 
-.show_images img {
-  max-height: 415px;
-  border-radius: 4px;
-  width: 290px;
-  height: max-content;
-  margin-top: 20px;
-  margin-bottom: 20px;
-  margin-left: 20px;
+.show_product p {
+  margin: 0px;
 }
 
 .show_images {
   left: 15px;
 }
 
-.show_buttons {
+.show_dates {
   margin-bottom: 2px;
 }
-
+  
 .show_buttonsss {
   margin-bottom: 14px;
   padding-bottom: 20px;
@@ -76,7 +78,8 @@
   width: 43%;
   height: 100%;
   top: 0;
-  left: 57%;
+  left: 55%;
+  padding: 20px 0;
 }
 
 .show_desc {
@@ -90,7 +93,7 @@
   text-align: left;
 }
 
-.show_buttons button {
+.show_dates button {
   background: darken($lightorange, 10%);
   padding: 10px;
   display: inline-block;
