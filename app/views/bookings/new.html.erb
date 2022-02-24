@@ -2,6 +2,9 @@
   <div class="row justify-content-center">
     <div class="col-12 col-md-6 col-lg-4">
       <h1>Book an awesome <br>super power</h1>
+      <% if @booking.errors[:power_id].present? %>
+        <p>Can't book the same power in the same time frame</p>
+      <% end %>
       <br>
       <%= simple_form_for [@power, @booking] do |f| %>
         <%= f.input :start_date, as: :date, html5: true %>
