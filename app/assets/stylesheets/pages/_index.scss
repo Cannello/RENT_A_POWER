@@ -21,12 +21,16 @@
   text-transform: uppercase;
 }
 
+.show_images {
+  left: 15px;
+}
+
 .show_images img {
   max-height: 415px;
   border-radius: 4px 0 0 4px;
   width: 290px;
   height: max-content;
-  
+
 }
 
 .show_container {
@@ -47,6 +51,22 @@
   margin-bottom: 30px;
 }
 
+.show_product {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  position: absolute;
+  width: 40%;
+  height: 100%;
+  top: 0;
+  left: 55%;
+  padding: 20px 0;
+}
+
+.show_product a {
+  margin-top: 5px;
+}
+
 .show_product h1 {
   font-size: 2.2em;
   color: $black;
@@ -54,43 +74,16 @@
 
 .show_product p {
   margin: 0px;
-}
-
-.show_images {
-  left: 15px;
+  font-size: .7em;
 }
 
 .show_dates {
   margin-bottom: 2px;
 }
-  
+
 .show_buttonsss {
   margin-bottom: 14px;
   padding-bottom: 20px;
-
-}
-
-.show_product {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  position: absolute;
-  width: 43%;
-  height: 100%;
-  top: 0;
-  left: 55%;
-  padding: 20px 0;
-}
-
-.show_desc {
-  text-transform: none;
-  letter-spacing: 0;
-  margin-bottom: 17px;
-  color: $black;
-  font-size: .7em;
-  line-height: 1.6em;
-  margin-right: 25px;
-  text-align: left;
 }
 
 .show_dates button {
@@ -111,6 +104,17 @@
     background: $orange;
     transition: all .4s ease-in-out;
   }
+}
+
+.show_desc {
+  text-transform: none;
+  letter-spacing: 0;
+  margin-bottom: 17px;
+  color: $black;
+  font-size: .7em;
+  line-height: 1.6em;
+  margin-right: 25px;
+  text-align: left;
 }
 
 .show_add {
