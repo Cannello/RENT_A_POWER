@@ -14,10 +14,12 @@ class BookingsController < ApplicationController
     @booking.power = @power
     @booking.user = current_user
 
-    if @booking.save
-      redirect_to bookings_path
-    else
+    if Booking.find_by(user: current_user, power_id: @power)
+      flash.alert = "You can't rent the same super power"
       render :new
+    else
+      @booking.save
+      redirect_to bookings_path
     end
   end
 
