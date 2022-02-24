@@ -1,7 +1,16 @@
-<h1>Book an awesome super power</h1>
-<br>
-<%= simple_form_for [@power, @booking] do |f| %>
-  <%= f.input :start_date, as: :date, html5: true %>
-  <%= f.input :end_date, as: :date, html5: true %>
-  <%= f.button :submit %>
-<% end %>
+<div class="container pt-5">
+  <div class="row justify-content-center">
+    <div class="col-12 col-md-6 col-lg-4">
+      <h1>Book an awesome <br>super power</h1>
+      <br>
+      <%= simple_form_for [@power, @booking] do |f| %>
+        <%= f.input :start_date, as: :date, html5: true %>
+        <%= f.input :end_date, as: :date, html5: true %>
+        <br>
+        <div class="form-actions d-flex justify-content-center">
+          <%= f.button :submit, "Create booking", class: 'btn btn-primary larger-btn' %>
+        </div>
+      <% end %>
+    </div>
+  </div>
+</div>
