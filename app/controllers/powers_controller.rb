@@ -7,6 +7,10 @@ class PowersController < ApplicationController
     else
       @powers = policy_scope(Power)
     end
+    respond_to do |format|
+      format.html
+      format.json # Follow the classic Rails flow and look for a create.json view
+    end
   end
 
   def show; end

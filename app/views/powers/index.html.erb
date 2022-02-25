@@ -1,31 +1,17 @@
-<div class="container">
+<div class="container" data-controller="power-search">
   <br>
   <h1>List of powers</h1>
   <br>
-  <%= form_tag powers_path, method: :get do %>
+  <%= form_tag powers_path, method: :get, data: { power_search_target: 'form'} do %>
     <%= text_field_tag :query,
       params[:query],
       class: "form-control",
-      placeholder: "Find a power"
+      placeholder: "Find a power",
+      data: { action: "keyup->power-search#search"}
     %>
   <% end %>
   <br>
-  <div class="row">
-    <% @powers.each do |power| %>
-      <div class="col-3">
-        <%= link_to power_path(power) do %>
-          <div class="powers-card mb-5">
-            <% if power.photo.key %>
-              <%= cl_image_tag power.photo.key, class: "card-img-top" %>
-            <% else %>
-              <img src="https://i.pinimg.com/originals/eb/f6/18/ebf618e89a81e16884639ff59e95a5a0.jpg?resize=1200:*" alt="" class="card-img-top">
-            <% end %>
-            <div class="card-body">
-              <h3 class="card-title d-flex justify-content-center"><%= power.name %></h3>
-            </div>
-          </div>
-        <% end %>
-      </div>
-    <% end %>
+  <div data-power-search-target="powers">
+    <%= render "power_list", powers: @powers %>
   </div>
 </div>
