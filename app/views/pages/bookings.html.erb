@@ -21,6 +21,7 @@
               <p> From: <%= booking.start_date.strftime("%d-%m-%Y") %> | To: <%= booking.end_date.strftime("%d-%m-%Y") %></p>
               <% if policy(booking).edit? %>
                 <%= link_to 'Edit booking', edit_power_booking_path(power_id: booking.power, id: booking), class: "btn btn-primary larger-btn w-100  booking-button" %>
+                <%= link_to "Remove", booking_path(booking), method: :delete, data: { confirm: "Are you sure?" }, class: "btn btn-primary larger-btn w-100  booking-button" %>
               <% end %>
             </div>
           <% end %>
