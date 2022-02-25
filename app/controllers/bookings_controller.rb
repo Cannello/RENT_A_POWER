@@ -1,3 +1,5 @@
+require "date"
+
 class BookingsController < ApplicationController
   before_action :set_power, only: %i[new create edit update]
   before_action :set_booking, only: %i[edit update]
@@ -38,7 +40,7 @@ class BookingsController < ApplicationController
     @booking = Booking.find(params[:id])
     authorize @booking
     @booking.destroy
-    redirect_to power_path(@booking.power)
+    redirect_to bookings_path
   end
 
   private
