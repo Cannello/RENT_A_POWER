@@ -1,5 +1,3 @@
-require "date"
-
 class BookingsController < ApplicationController
   before_action :set_power, only: %i[new create edit update]
   before_action :set_booking, only: %i[edit update]
