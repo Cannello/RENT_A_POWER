@@ -34,6 +34,13 @@ class BookingsController < ApplicationController
     end
   end
 
+  def destroy
+    @booking = Booking.find(params[:id])
+    authorize @booking
+    @booking.destroy
+    redirect_to power_path(@booking.power)
+  end
+
   private
 
   def set_power

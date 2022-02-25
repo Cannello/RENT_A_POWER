@@ -5,6 +5,7 @@ class Booking < ApplicationRecord
   validate :check_start_date_acceptance?
   validate :check_end_date_acceptance?
   validate :you_already_booked_power?
+  # before_destroy :ensure_deletable
 
   def check_start_date_acceptance?
     errors.add(:start_date, 'must be bigger than today') unless Date.today.to_s <= start_date.to_s
@@ -22,4 +23,9 @@ class Booking < ApplicationRecord
       end
     end
   end
+
+  # private
+  # def ensure_deletable
+  #   self.date_trip.to_time < Date.now + 2
+  # end
 end
