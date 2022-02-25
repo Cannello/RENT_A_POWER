@@ -4,3 +4,14 @@
   right: 16px;
   z-index: 1000;
 }
+
+.warning-alert {
+  position: relative;
+  bottom: 0;
+  right: 0;
+  z-index: auto;
+  color: #8a4c14;
+  background-color: #fae5d3;
+  border-color: #f8d8bd;
+
+}

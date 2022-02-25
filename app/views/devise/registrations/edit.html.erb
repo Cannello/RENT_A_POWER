@@ -1,4 +1,4 @@
-<div class="container pt-5">
+<div class="container pt-5 pb-5">
   <div class="row justify-content-center">
     <div class="col-12 col-md-6 col-lg-4">
       <h2>Edit <%= resource_name.to_s.humanize %></h2>
@@ -26,17 +26,15 @@
                       input_html: { autocomplete: "current-password" } %>
           <%= f.input :avatar %>
         </div>
-
+        <br>
         <div class="form-actions d-flex justify-content-center">
           <%= f.button :submit, "Update", class: 'btn btn-primary larger-btn' %>
         </div>
       <% end %>
-
-      <div class="d-flex flex-column align-items-center">
       <br>
-      <p>Unhappy? <%= link_to "Cancel my account", registration_path(resource_name), data: { confirm: "Are you sure?" }, method: :delete %></p>
-
-      <%= link_to "Back", :back %>
+      <div class="d-flex flex-column align-items-center">
+        <p>Unhappy? <%= link_to "Cancel my account", registration_path(resource_name), data: { confirm: "Are you sure?" }, method: :delete %></p>
+        <p><%= link_to "Back", :back %></p>
       </div>
     </div>
   </div>
