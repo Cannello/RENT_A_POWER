@@ -2,13 +2,16 @@
   <div class="row justify-content-center">
     <div class="col-12 col-md-6 col-lg-4">
       <h1>Book an awesome <br>super power</h1>
-      <% if @booking.errors[:power_id].present? %>
-        <p>Can't book the same power in the same time frame</p>
-      <% end %>
       <br>
       <%= simple_form_for [@power, @booking] do |f| %>
         <%= f.input :start_date, as: :date, html5: true %>
         <%= f.input :end_date, as: :date, html5: true %>
+        <br>
+        <% if @booking.errors[:power_id].present? %>
+          <div class="alert warning-alert" role="alert">
+            <p class="rem-stupid-margin">Can't book the same power in the same time frame</p>
+          </div>
+        <% end %>
         <br>
         <div class="form-actions d-flex justify-content-center">
           <%= f.button :submit, "Create booking", class: 'btn btn-primary larger-btn' %>
